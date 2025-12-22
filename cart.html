@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | Fashion Store</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #6e1b1b;
+    }
+
+    #cartItems {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .cart-item img {
+      width: 80px;
+      border-radius: 8px;
+    }
+
+    .cart-item h4 {
+      margin: 0;
+      flex: 1;
+      padding-left: 15px;
+      color: #333;
+    }
+
+    .cart-item p {
+      margin: 0 15px;
+      font-weight: bold;
+      color: #6e1b1b;
+    }
+
+    .cart-item button {
+      background: #6e1b1b;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cart-item button:hover {
+      background: #8c2a2a;
+    }
+
+    .cart-total {
+      margin-top: 30px;
+      text-align: right;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    @media(max-width:600px){
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cart-item p {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+<header class="header">
+    <div class="nav-container">
+      <div class="logo">Wizora</div>
+      <nav class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/cart.html">Cart</a>
+      </nav>
+      <div class="mobile-menu-toggle">
+        ☰
+      </div>
+    </div>
+    <div class="cart">
+        🛒 Cart: <span id="cart-count">0</span> items | $<span id="cart-total">0</span>
+      </div>
+  </header>
+
+  <div class="container">
+    <h2>Your Shopping Cart</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      Total: $<span id="totalPrice">0.00</span>
+    </div>
+  </div>
+   <script src="/script.js"></script>
+  <script src="/cart.js"></script>
+</body>
+</html> 
